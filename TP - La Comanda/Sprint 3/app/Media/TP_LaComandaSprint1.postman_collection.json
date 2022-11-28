@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "6169bb3c-fe7e-4af8-95c7-84e038d4336b",
+		"name": "TP_LaComanda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sprint 1",
+			"item": [
+				{
+					"name": "Login Socio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "100000",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "bianca123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Bartender",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Valeria Montes",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Bartender",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "vale123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Cocinero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Facundo Torres",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Cocinero",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "facundo123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Cervecero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Mariano Pavone",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Cervecero",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "mariano123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Mozo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Julieta Verdi",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Mozo",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "julieta123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Trago Negroni",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Negroni",
+									"type": "default"
+								},
+								{
+									"key": "precio",
+									"value": "950",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Bartender",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Comida Tortilla",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Tortilla de papa",
+									"type": "default"
+								},
+								{
+									"key": "precio",
+									"value": "1000",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Cocinero",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Mesa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigo",
+									"value": "10000",
+									"type": "default"
+								},
+								{
+									"key": "idEmpleado",
+									"value": "100004",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/mesas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"mesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Mesas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/mesas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"mesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Comanda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoMesa",
+									"value": "10000",
+									"type": "default"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Agustina",
+									"type": "default"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/C:/Users/Bianca/Pictures/Comandas/comanda.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/comandas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"comandas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoComanda",
+									"value": "TQJE8",
+									"type": "default"
+								},
+								{
+									"key": "idItem",
+									"value": "106",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Comandas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/comandas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"comandas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
