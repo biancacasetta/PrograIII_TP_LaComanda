@@ -3,23 +3,18 @@
 class ItemMenu
 {
     public $id;
-    public $idArea;
-    public $codigoComanda;
     public $nombre;
     public $precio;
-    public $tiempoInicio;
-    public $tiempoFin;
-    public $duracion;
+    public $perfil;
 
     public function crearItemMenu()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO items (idUsuario, idArea, nombreApellido, fechaAlta) VALUES
-        (:idUsuario, :idArea, :nombreApellido, :fechaAlta)");
-        $consulta->bindValue(':idUsuario', $this->idUsuario, PDO::PARAM_INT);
-        $consulta->bindValue(':idArea', $this->idArea, PDO::PARAM_INT);
-        $consulta->bindValue(':nombreApellido', $this->nombreApellido, PDO::PARAM_STR);
-        $consulta->bindValue(':fechaAlta', $this->fechaAlta, PDO::PARAM_STR);
+        $consulta = $objAccesoDatos->prepararConsulta("INSERT INTO items (nombre, precio, perfil) VALUES
+        (:nombre, :precio, :perfil)");
+        $consulta->bindValue(':nombre', $this->nombre, PDO::PARAM_STR);
+        $consulta->bindValue(':precio', $this->precio, PDO::PARAM_INT);
+        $consulta->bindValue(':perfil', $this->perfil, PDO::PARAM_STR);
         $consulta->execute();
 
         return $objAccesoDatos->obtenerUltimoId();
@@ -28,19 +23,53 @@ class ItemMenu
     public static function obtenerTodos()
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM empleados");
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM items");
         $consulta->execute();
 
-        return $consulta->fetchAll(PDO::FETCH_CLASS, 'Empleado');
+        return $consulta->fetchAll(PDO::FETCH_CLASS, 'ItemMenu');
     }
 
-    public static function obtenerEmpleado($nombreApellido)
+    public static function obtenerItemMenu($id)
     {
         $objAccesoDatos = AccesoDatos::obtenerInstancia();
-        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM empleados WHERE nombreApellido = :nombreApellido");
-        $consulta->bindValue(':nombreApellido', $nombreApellido, PDO::PARAM_STR);
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM items WHERE id = :id");
+        $consulta->bindValue(':id', $id, PDO::PARAM_INT);
         $consulta->execute();
 
-        return $consulta->fetchObject('Empleado');
+        return $consulta->fetchObject('ItemMenu');
+    }
+
+    public static function modificarItemMenu($item)
+    {
+        $objAccesoDato = AccesoDatos::obtenerInstancia();
+        $consulta = $objAccesoDato->prepararConsulta("UPDATE items SET nombre = :nombre, precio = :precio, perfil = :perfil in WHERE id = :id");
+        $consulta->bindValue(':nombre', $item->nombre, PDO::PARAM_STR);
+        $consulta->bindValue(':precio', $item->precio, PDO::PARAM_INT);
+        $consulta->bindValue(':perfil', $item->perfil, PDO::PARAM_STR);
+        $consulta->bindValue(':id', $item->id, PDO::PARAM_INT);
+
+        return $consulta->execute();
+    }
+
+    public static function borrarItemMenu($id)
+    {
+        $objAccesoDato = AccesoDatos::obtenerInstancia();
+        $consulta = $objAccesoDato->prepararConsulta("DELETE FROM items WHERE id = :id");
+        $consulta->bindValue(':id', $id, PDO::PARAM_INT);
+
+        return $consulta->execute();
+    }
+
+    public static function obtenerItemsPorComanda($codigo)
+    {
+        $objAccesoDato = AccesoDatos::obtenerInstancia();
+        $consulta = $objAccesoDato->prepararConsulta("SELECT * FROM items
+        JOIN pedidos ON items.id = pedidos.idItem
+        JOIN comandas ON comandas.codigo = pedidos.codigoComanda
+        WHERE pedidos.codigoComanda = :codigoComanda");
+        $consulta->bindValue(':codigoComanda', $codigo);
+        $consulta->execute();
+
+        return $consulta->fetchAll(PDO::FETCH_CLASS, 'ItemMenu');
     }
 }

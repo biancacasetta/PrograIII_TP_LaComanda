@@ -1,0 +1,860 @@
+{
+	"info": {
+		"_postman_id": "6169bb3c-fe7e-4af8-95c7-84e038d4336b",
+		"name": "TP_LaComanda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sprint 2",
+			"item": [
+				{
+					"name": "Login Socio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "100000",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "bianca123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Mozo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "100004",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "julieta123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Cervecero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "100003",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "mariano123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Cocinero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "100002",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "facundo123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Bartender",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk1NzEyOTcsImV4cCI6MTY2OTYzMTI5NywiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwNCwibm9tYnJlQ29tcGxldG8iOiJKdWxpZXRhIFZlcmRpIiwicGVyZmlsIjoiTW96byJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.Cs70RXyL0cAtmsHyMbWCneZ4utASNyVDPHA3pT0POEU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Valeria Montes",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Bartender",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "vale123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Cocinero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Facundo Torres",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Cocinero",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "facundo123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Cervecero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Mariano Pavone",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Cervecero",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "mariano123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Mozo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombreApellido",
+									"value": "Julieta Verdi",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Mozo",
+									"type": "default"
+								},
+								{
+									"key": "esSocio",
+									"value": "No",
+									"type": "default"
+								},
+								{
+									"key": "clave",
+									"value": "julieta123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Trago Negroni",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Negroni",
+									"type": "default"
+								},
+								{
+									"key": "precio",
+									"value": "950",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Bartender",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Comida Tortilla",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Tortilla de papa",
+									"type": "default"
+								},
+								{
+									"key": "precio",
+									"value": "1000",
+									"type": "default"
+								},
+								{
+									"key": "perfil",
+									"value": "Cocinero",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Mesa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk1NzEyOTcsImV4cCI6MTY2OTYzMTI5NywiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwNCwibm9tYnJlQ29tcGxldG8iOiJKdWxpZXRhIFZlcmRpIiwicGVyZmlsIjoiTW96byJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.Cs70RXyL0cAtmsHyMbWCneZ4utASNyVDPHA3pT0POEU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "codigo",
+									"value": "10001",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/mesas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"mesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Mesas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/mesas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"mesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Comanda",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MDE0NjgsImV4cCI6MTY2OTY2MTQ2OCwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwNCwibm9tYnJlQ29tcGxldG8iOiJKdWxpZXRhIFZlcmRpIiwicGVyZmlsIjoiTW96byJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.-0DZxpo7R6I9iyNptYx-BuCYCap3wEGJACAQWI1qdCI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoMesa",
+									"value": "10000",
+									"type": "default"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Nicolás",
+									"type": "default"
+								},
+								{
+									"key": "imagen",
+									"type": "file",
+									"src": "/C:/Users/Bianca/Pictures/Comandas/comanda.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/comandas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"comandas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta Pedido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk1NzEyOTcsImV4cCI6MTY2OTYzMTI5NywiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwNCwibm9tYnJlQ29tcGxldG8iOiJKdWxpZXRhIFZlcmRpIiwicGVyZmlsIjoiTW96byJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.Cs70RXyL0cAtmsHyMbWCneZ4utASNyVDPHA3pT0POEU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoComanda",
+									"value": "NTKS5",
+									"type": "default"
+								},
+								{
+									"key": "idItem",
+									"value": "103",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listado Comandas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/comandas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"comandas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pendientes por Perfil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MDEyMTEsImV4cCI6MTY2OTY2MTIxMSwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwMywibm9tYnJlQ29tcGxldG8iOiJNYXJpYW5vIFBhdm9uZSIsInBlcmZpbCI6IkNlcnZlY2VybyJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.0c9Y1KMLGNGUavPyUi5QY93E-ZZb3rkTBmKigIPtLjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/pedidos/pendientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"pedidos",
+								"pendientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tomar Pedido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MTUyMTgsImV4cCI6MTY2OTY3NTIxOCwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwMiwibm9tYnJlQ29tcGxldG8iOiJGYWN1bmRvIFRvcnJlcyIsInBlcmZpbCI6IkNvY2luZXJvIn0sImFwcCI6IlBhcmNpYWxDcmlwdG8ifQ.5pFeeiUPPva3Wdw_Dxyk6WojjmRQ3uisUPkBRs2EanU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "duracion",
+									"value": "45",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:666/pedidos/tomar/1005",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"pedidos",
+								"tomar",
+								"1005"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Terminar Pedido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MDEyMTEsImV4cCI6MTY2OTY2MTIxMSwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwMywibm9tYnJlQ29tcGxldG8iOiJNYXJpYW5vIFBhdm9uZSIsInBlcmZpbCI6IkNlcnZlY2VybyJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.0c9Y1KMLGNGUavPyUi5QY93E-ZZb3rkTBmKigIPtLjk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:666/pedidos/terminar/1003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"pedidos",
+								"terminar",
+								"1003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servir Pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MDE0NjgsImV4cCI6MTY2OTY2MTQ2OCwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwNCwibm9tYnJlQ29tcGxldG8iOiJKdWxpZXRhIFZlcmRpIiwicGVyZmlsIjoiTW96byJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.-0DZxpo7R6I9iyNptYx-BuCYCap3wEGJACAQWI1qdCI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:666/pedidos/servir/TQJE8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"pedidos",
+								"servir",
+								"TQJE8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cobrar Cuenta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MDE0NjgsImV4cCI6MTY2OTY2MTQ2OCwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwNCwibm9tYnJlQ29tcGxldG8iOiJKdWxpZXRhIFZlcmRpIiwicGVyZmlsIjoiTW96byJ9LCJhcHAiOiJQYXJjaWFsQ3JpcHRvIn0.-0DZxpo7R6I9iyNptYx-BuCYCap3wEGJACAQWI1qdCI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:666/comandas/TQJE8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"comandas",
+								"TQJE8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cerrar Mesa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Njk2MTE4MDUsImV4cCI6MTY2OTY3MTgwNSwiYXVkIjoiYTI4NDQwNGQ2MDY2M2QzN2E0YzlkNWRkZTUzYjA5ZTVhOWQ1N2U4NSIsImRhdGEiOnsiaWQiOjEwMDAwMCwibm9tYnJlQ29tcGxldG8iOiJCaWFuY2EgQ2FzZXR0YSIsInBlcmZpbCI6IlNvY2lvIn0sImFwcCI6IlBhcmNpYWxDcmlwdG8ifQ.VYtnVOvOAqrTLECGFYiFGStK4xuciNJGFwyGbduejTk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:666/mesas/10002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"mesas",
+								"10002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Demora",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:666/demora?codigoMesa=10001&codigoComanda=NTKS5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "666",
+							"path": [
+								"demora"
+							],
+							"query": [
+								{
+									"key": "codigoMesa",
+									"value": "10001"
+								},
+								{
+									"key": "codigoComanda",
+									"value": "NTKS5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
