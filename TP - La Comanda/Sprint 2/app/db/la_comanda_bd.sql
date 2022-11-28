@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 06:33 AM
+-- Generation Time: Nov 28, 2022 at 06:50 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -41,7 +41,8 @@ CREATE TABLE `comandas` (
 --
 
 INSERT INTO `comandas` (`codigo`, `codigoMesa`, `nombreCliente`, `imagen`, `cuenta`, `estado`) VALUES
-('TQJE8', 10000, 'Agustina', 'Media/Comandas/TQJE8-10000-Agustina.jpg', NULL, 'Pendiente');
+('NTKS5', 10001, 'Nicolás', 'Media/Comandas/NTKS5-10001-Nicolás.jpg', NULL, 'En preparación'),
+('TQJE8', 10000, 'Agustina', 'Media/Comandas/TQJE8-10000-Agustina.jpg', 1700, 'Cobrada');
 
 -- --------------------------------------------------------
 
@@ -115,8 +116,8 @@ CREATE TABLE `mesas` (
 --
 
 INSERT INTO `mesas` (`codigo`, `idEmpleado`, `estado`) VALUES
-(10000, 100004, 'Cerrada'),
-(10001, NULL, 'Cerrada'),
+(10000, NULL, 'Cerrada'),
+(10001, 100004, 'Con cliente esperando pedido'),
 (10002, NULL, 'Cerrada'),
 (10003, NULL, 'Cerrada'),
 (10004, NULL, 'Cerrada'),
@@ -142,8 +143,10 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`id`, `codigoComanda`, `idItem`, `idEmpleado`, `estado`, `duracion`) VALUES
-(1001, 'TQJE8', 100, NULL, 'Pendiente', NULL),
-(1003, 'TQJE8', 106, NULL, 'Pendiente', NULL);
+(1001, 'TQJE8', 100, 100002, 'Servido', 25),
+(1003, 'TQJE8', 106, 100003, 'Servido', 5),
+(1004, 'NTKS5', 108, 100002, 'En preparación', 30),
+(1005, 'NTKS5', 103, 100002, 'En preparación', 45);
 
 --
 -- Indexes for dumped tables
@@ -192,7 +195,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT for table `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100005;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100011;
 
 --
 -- AUTO_INCREMENT for table `items`
@@ -210,7 +213,7 @@ ALTER TABLE `mesas`
 -- AUTO_INCREMENT for table `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;
 
 --
 -- Constraints for dumped tables
